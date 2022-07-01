@@ -1,4 +1,8 @@
 -- Attaches to every FileType mode
+local cmp_status_ok, cmp = pcall(require, "colorizer")
+if not cmp_status_ok then
+	return
+end
 require("colorizer").setup()
 
 -- Attach to certain Filetypes, add special configuration for `html`
