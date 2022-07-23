@@ -101,6 +101,11 @@ return packer.startup(function(use)
 	use("norcalli/nvim-colorizer.lua")
 	use("mattn/emmet-vim")
 	use({ "filipdutescu/renamer.nvim", branch = "master" })
+  use 'Murtaza-Udaipurwala/gruvqueen'
+  use 'eddyekofo94/gruvbox-flat.nvim'
+  use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+  use "kylechui/nvim-surround"
+  use 'marko-cerovac/material.nvim'
 	-- Automatically set up your configuration after cloning packer.nvim
 
 	-- Put this at the end after all plugins

@@ -45,6 +45,7 @@ keymap("v", "p", '"_dP', opts)
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+keymap("i", "<C-p>", "<ESC>A", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -86,8 +87,11 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 let g:user_emmet_leader_key='<S-e>'
 ]]
-
+keymap("n","<leader>sr",":%SnipRun<cr>",opts)
   --Renamer
 vim.api.nvim_set_keymap('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+
+
+

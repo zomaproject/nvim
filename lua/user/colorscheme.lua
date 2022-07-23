@@ -1,22 +1,20 @@
-local catppuccin = require("catppuccin").setup({
-term_colors = true,
+require("catppuccin").setup({
 styles = {
-	comments = "NONE",
-	conditionals = "bold",
-	loops = "bold",
-	functions = "bold",
-	keywords = "bold",
-	strings = "NONE",
-	variables = "NONE",
-	numbers = "NONE",
-	booleans = "NONE",
-	properties = "NONE",
-	types = "NONE",
-	operators = "NONE",
-},
+		comments = { "italic" },
+		conditionals = { "italic","bold" },
+		loops = {},
+		functions = {"italic","bold"},
+		keywords = {"bold"},
+		strings = {},
+		variables = {},
+		numbers = {},
+		booleans = {},
+		properties = {},
+		types = {},
+		operators = {},
+	},
 })
 local colorscheme = "catppuccin"
-
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
   return
